@@ -1,0 +1,62 @@
+﻿<h1>@ViewData["Text"]</h1>
+<h2>Список</h2>
+<ol type="A">
+    @for (int i = 1; i <= 5; i++)
+    {
+        <li>элемент @i списка</li>
+    }
+</ol>
+<hr/>
+<h2>Форма</h2>
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                    Чек-бокс 1
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck2">
+                    Чек-бокс 2
+                </div>
+            </div>
+        </div>
+        <fieldset class="form-group" style="margin-top: 10px; margin-bottom: 10px">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                        Радио-1
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        Радио-2
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        Радио-3
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group row" style="margin-top: 10px; margin-bottom: 10px">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Логин:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Введите имя">
+            </div>
+        </div>
+        <div class="form-group row" style="margin-top: 10px; margin-bottom: 10px">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Введите пароль">
+            </div>
+        </div>
+        <select class="form-select" asp-items="@ViewData["ListDemo"] as SelectList"></select>
+        <div class="form-group row" style="margin-top: 10px; margin-bottom: 10px">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-outline-dark">Отправить</button>
+            </div>
+        </div>
+    </form>
