@@ -1,20 +1,37 @@
+@using Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
 @await Component.InvokeAsync("Cart")
 <div class="dropdown ms-4 nav-color">
     <div class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="true">
-        <img src="images/avatar.png" width="30"
-             alt="User" class="rounded" />
+        <img img-action="GetAvatar"
+             img-controller="Image"
+             width="30" alt="User"
+             class="rounded bg-light"/>
     </div>
     <ul class="dropdown-menu"
         aria-labelledby="dropdownMenuButton">
-        <li><div class="dropdown-item-text">
-            <img src="images/avatar.png" width="50"
-                 alt="User" class="rounded" />
-            user@mail.ru
-        </div></li>
-        <li><div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" asp-controller="Cart" asp-action="Index">Корзина</a></li>
-        <li><a class="dropdown-item" asp-controller="Product" asp-action="UserProducts">Мои товары</a></li>
-        <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Выйти</a></li>
+        <li>
+            <div class="dropdown-item-text">
+                <img img-action="GetAvatar"
+                     img-controller="Image"
+                     width="30" alt="User"
+                     class="rounded bg-light"/>
+                @User.Identity.Name
+            </div>
+        </li>
+        <li>
+        <div class="dropdown-divider"></div>
+        <li>
+            <a class="dropdown-item" asp-controller="Cart" asp-action="Index">Корзина</a>
+        </li>
+        <li>
+            <a class="dropdown-item" asp-controller="Product" asp-action="UserProducts">Мои товары</a>
+        </li>
+        <li>
+            <form id="form-inline" class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <a href="javascript:{}" onclick="document.getElementById('form-inline').submit()">Log out</a>
+            </form>
+        </li>
     </ul>
 </div>
 <!-- Информация пользователя - конец -->
