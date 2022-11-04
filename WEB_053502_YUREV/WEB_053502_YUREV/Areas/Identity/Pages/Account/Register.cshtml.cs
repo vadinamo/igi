@@ -2,23 +2,13 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.Extensions.Logging;
-using WEB_053502_YUREV.Data;
 using WEB_053502_YUREV.Entities;
 
 namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
@@ -86,7 +76,7 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
-            
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -110,7 +100,7 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
             [Display(Name = "User role")]
             public string UserRole { get; set; }
             
-            public IFormFile Avatar { get; set; }
+            public FileUpload FileUpload { get; set; }
         }
 
 
@@ -129,29 +119,31 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-
+                
                 await _userStore.SetUserNameAsync(user, Input.Name, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                
+
                 using (var memoryStream = new MemoryStream())
                 {
-                    if (Input.Avatar != null)
+                    if (Input.FileUpload != null)
                     {
-                        user.Avatar = new byte[(int)Input.Avatar.Length];                    
-                        await Input.Avatar.OpenReadStream().ReadAsync(user.Avatar,0,(int)Input.Avatar.Length);
-                        user.ImageMimeType = Input.Avatar.ContentType;
+                        await Input.FileUpload.FormFile.CopyToAsync(memoryStream);
+                        if (memoryStream.Length < 2097152)
+                        {
+                            user.Avatar = memoryStream.ToArray();
+                        }
                     }
                 }
                 
                 var result = await _userManager.CreateAsync(user, Input.Password);
-
                 
+
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
-                    
+                    _logger.LogInformation("{0} - user creater a new account.", 
+                        DateTime.Now.ToString("d") + " " + DateTime.Now.ToString("T"));
                     await _userManager.AddToRoleAsync(user, role.Name);
-                    
+
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
@@ -162,7 +154,7 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
                         protocol: Request.Scheme);
 
                     // await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        // $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    //     $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
@@ -179,7 +171,7 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-            
+
             
             ViewData["roles"] = _roleManager.Roles.ToList();
             // If we got this far, something failed, redisplay form

@@ -2,18 +2,12 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using WEB_053502_YUREV.Entities;
 
 namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
@@ -22,11 +16,13 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger, UserManager<ApplicationUser> userManager)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
         /// <summary>
@@ -66,7 +62,7 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [EmailAddress]
+            [Display(Name = "Username/Email")]
             public string Email { get; set; }
 
             /// <summary>
@@ -108,31 +104,72 @@ namespace WEB_053502_YUREV.Areas.Identity.Pages.Account
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
+            if (Input.Email.IndexOf('@') > -1)
+            {
+                //Validate email format
+                string emailRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                                    @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                                    @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+                var re = new Regex(emailRegex);
+                if (!re.IsMatch(Input.Email))
+                {
+                    ModelState.AddModelError("Email", "Email is not valid");
+                }
+            }
+            else
+            {
+                //validate Username format
+                string usernameRegex = @"^[a-zA-Z0-9]*$";
+                var re = new Regex(usernameRegex);
+                if (!re.IsMatch(Input.Email))
+                {
+                    ModelState.AddModelError("Email", "Username is not valid");
+                }
+            }
             if (ModelState.IsValid)
             {
+                var userName = Input.Email;
+                if (userName.IndexOf('@') > -1)
+                {
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+                    if (user == null)
+                    {
+                        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                        return Page();
+                    }
+                    else
+                    {
+                        userName = user.UserName;
+                    }
+                }
+
+                var result = await _signInManager.PasswordSignInAsync(userName, Input.Password, Input.RememberMe,
+                    lockoutOnFailure: false);
+
+
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                // var result = await _signInManager.PasswordSignInAsync(Input.EmailLogin, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
+                    _logger.LogInformation("{0} - user logged in.", 
+                        DateTime.Now.ToString("d") + " " + DateTime.Now.ToString("T"));
                     return LocalRedirect(returnUrl);
                 }
+
                 if (result.RequiresTwoFactor)
                 {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
+                    return RedirectToPage("./LoginWith2fa", new {ReturnUrl = returnUrl, RememberMe = Input.RememberMe});
                 }
+
                 if (result.IsLockedOut)
                 {
                     _logger.LogWarning("User account locked out.");
                     return RedirectToPage("./Lockout");
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Page();
-                }
             }
+
 
             // If we got this far, something failed, redisplay form
             return Page();
