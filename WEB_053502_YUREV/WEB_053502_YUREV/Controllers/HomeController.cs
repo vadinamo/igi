@@ -22,6 +22,7 @@ public class HomeController:Controller
 
     public IActionResult Index()
     {
+        
         ViewData["Text"] = "Лабораторная работа №2";
         ViewData["ListDemo"] = new SelectList(new List<ListDemo>
         {

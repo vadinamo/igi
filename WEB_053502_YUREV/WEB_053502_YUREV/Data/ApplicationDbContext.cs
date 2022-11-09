@@ -12,8 +12,9 @@ public class ApplicationDbContext : IdentityDbContext
     }
     
     public new DbSet<ApplicationUser> Users { get; set; }
+    public new DbSet<Item> Items { get; set; }
+    public new DbSet<ItemCategory> ItemCategories { get; set; }
 
-    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ApplicationUser>().ToTable("AspNetUsers");

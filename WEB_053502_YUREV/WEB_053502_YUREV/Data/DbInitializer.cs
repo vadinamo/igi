@@ -30,6 +30,68 @@ public class DbInitializer : IDbInitializer
     {
         await _context.Database.EnsureCreatedAsync();
         
+        if (!_context.ItemCategories.Any())
+        {
+            var itemCategoryList = new List<ItemCategory>()
+            {
+                new ItemCategory() { Id = Guid.NewGuid(), CategoryName = "Shirt" },
+                new ItemCategory() {Id = Guid.NewGuid(), CategoryName = "Pants"},
+                new ItemCategory() {Id = Guid.NewGuid(), CategoryName = "Headdress"},
+                new ItemCategory() {Id = Guid.NewGuid(), CategoryName = "Jacket"},
+                new ItemCategory() {Id = Guid.NewGuid(), CategoryName = "Pants"},
+                new ItemCategory() {Id = Guid.NewGuid(), CategoryName = "Shoes"}
+            };
+            
+            foreach (var category in itemCategoryList)
+            {
+                _context.ItemCategories.Add(category);
+                await _context.SaveChangesAsync();
+            }
+        }
+        
+        if (!_context.Items.Any())
+        {
+            var items = new List<Item>()
+            {
+                new Item()
+                {
+                    Id = Guid.NewGuid(), Name = "Shirt", Description = "shirt description",
+                    Category = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Shirt"), Price = 1
+                },
+                new Item()
+                {
+                    Id = Guid.NewGuid(), Name = "Pants", Description = "pants description",
+                    Category = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Pants"), Price = 2
+                },
+                new Item()
+                {
+                    Id = Guid.NewGuid(), Name = "Headdress", Description = "headdress description",
+                    Category = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Headdress"), Price = 3
+                },
+                new Item()
+                {
+                    Id = Guid.NewGuid(), Name = "Jacket", Description = "jacket description",
+                    Category = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Jacket"), Price = 4
+                },
+                new Item()
+                {
+                    Id = Guid.NewGuid(), Name = "Pants", Description = "pants description",
+                    Category = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Pants"), Price = 5
+                },
+                new Item()
+                {
+                    Id = Guid.NewGuid(), Name = "Shoes", Description = "shoes description",
+                    Category = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Shoes"), Price = 6
+                }
+            };
+
+            foreach (var item in items)
+            {
+                _context.Items.Add(item);
+                await _context.SaveChangesAsync();
+            }
+        }
+
         if (_context.Users.Any())
             return;
         
