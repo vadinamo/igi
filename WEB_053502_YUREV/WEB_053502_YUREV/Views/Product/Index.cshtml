@@ -1,57 +1,66 @@
-@model IEnumerable<Item>
+@model ListViewModel<Item>
+
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Product";
+    Layout = "_Layout";
+}
+@{ 
+    var categories = ViewData["Groups"] as IEnumerable<ItemCategory>;
+    Guid currentGroup = (Guid)ViewData["CurrentGroup"];
+   
+    var text = currentGroup != Guid.Empty ? 
+        categories.FirstOrDefault(g => g.Id == currentGroup)?.CategoryName : "All";    
 }
 
 <div class="scaffold">
-    <h1>Index</h1>
-
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+    <div class="row">
+        <div class="col-2">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" 
+                   asp-action="Index" asp-controller="Product"
+                   role="button" 
+                   id="dropdownMenuLink" 
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @text
+                </a>
+                
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item"
+                           asp-action="Index"
+                           asp-controller="Product">All</a>
+                    </li>
+                    
+                    @foreach (var item in categories)
+                    {
+                        <li>
+                            <a class="dropdown-item"
+                               asp-action="Index"
+                               asp-controller="Product"
+                               asp-route-category="@item.Id"
+                               asp-route-pageNo="1">
+                                @item.CategoryName
+                            </a>
+                        </li>
+                    }               
+                </ul>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="card-group" id="list">
+                @foreach (var item in Model)
+                {
+                    <partial name="_ListItemPartial" model="@item"/>
+                }
+            </div>
+            <pager page-current="@Model.CurrentPage"
+                   page-total="@Model.PagesCount"
+                   action="Index"
+                   controller="Product"
+                   group-id="@currentGroup"></pager>
+            <div>
     
-    <table class="table">
-        <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <th>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </th>
-                <th>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </th>
-                <th>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </th>
-                <th>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </th>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-        </tbody>
-    </table>
+            </div>
+        </div>
+    </div>
 </div>
