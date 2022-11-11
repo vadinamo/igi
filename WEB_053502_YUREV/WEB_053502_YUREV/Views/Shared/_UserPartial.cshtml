@@ -1,6 +1,4 @@
-@using Microsoft.AspNetCore.Identity.EntityFrameworkCore
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@using WEB_053502_YUREV.Entities
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> signInManager
 
@@ -9,17 +7,19 @@
     @await Component.InvokeAsync("Cart")
     <div class="dropdown ms-4 nav-color">
         <div class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="true">
-            <img src="@Url.Action("GetAvatar", "Home")" 
-                 onerror="this.onerror=null; this.src='@Url.Content("/images/avatar.png")'" 
-                 width="40" height="40" alt="@User.Identity.Name" class="rounded"/>
+            <img img-controller="Home"
+                   img-action="GetAvatar"
+                   onerror="this.onerror=null; this.src='@Url.Content("~/images/avatar.png")'"
+                   width="40" height="40" alt="@User.Identity.Name" class="rounded"/>
         </div>
         <ul class="dropdown-menu"
             aria-labelledby="dropdownMenuButton">
             <li>
                 <div class="dropdown-item-text">
-                    <img src="@Url.Action("GetAvatar", "Home")" 
-                         onerror="this.onerror=null; this.src='@Url.Content("/images/avatar.png")'" 
-                         width="40" height="40" alt="@User.Identity.Name" class="rounded"/>
+                    <img img-controller="Home"
+                           img-action="GetAvatar"
+                           onerror="this.onerror=null; this.src='@Url.Content("~/images/avatar.png")'"
+                           width="40" height="40" alt="@User.Identity.Name" class="rounded"/>
                     @User.Identity.Name
                 </div>
             </li>

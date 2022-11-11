@@ -8,13 +8,9 @@ public class PagerTagHelper : TagHelper
     LinkGenerator _linkGenerator;
 
     public int PageCurrent { get; set; }
-
     public int PageTotal { get; set; }
-
     public string PagerClass { get; set; }
-
     public string Action { get; set; }
-
     public string Controller { get; set; }
     public Guid? GroupId { get; set; }
 
