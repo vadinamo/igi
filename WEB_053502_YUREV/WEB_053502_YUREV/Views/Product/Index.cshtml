@@ -4,33 +4,35 @@
     ViewBag.Title = "Product";
     Layout = "_Layout";
 }
-@{ 
-    var categories = ViewData["Groups"] as IEnumerable<ItemCategory>;
-    Guid currentGroup = (Guid)ViewData["CurrentGroup"];
-   
-    var text = currentGroup != Guid.Empty ? 
-        categories.FirstOrDefault(g => g.Id == currentGroup)?.CategoryName : "All";    
+@{
+    var categories = ViewData["Categories"] as IEnumerable<ItemCategory>;
+    Guid currentCategory = (Guid)ViewData["CurrentCategory"];
+
+    var text = currentCategory != Guid.Empty ?
+        categories.FirstOrDefault(g => g.Id == currentCategory)?.CategoryName : "All";
 }
 
 <div class="scaffold">
     <div class="row">
         <div class="col-2">
             <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" 
+                <a class="btn btn-secondary dropdown-toggle"
                    asp-action="Index" asp-controller="Product"
-                   role="button" 
-                   id="dropdownMenuLink" 
+                   role="button"
+                   id="dropdownMenuLink"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @text
                 </a>
-                
+
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li>
                         <a class="dropdown-item"
                            asp-action="Index"
-                           asp-controller="Product">All</a>
+                           asp-controller="Product">
+                            All
+                        </a>
                     </li>
-                    
+
                     @foreach (var item in categories)
                     {
                         <li>
@@ -42,7 +44,7 @@
                                 @item.CategoryName
                             </a>
                         </li>
-                    }               
+                    }
                 </ul>
             </div>
         </div>
@@ -57,10 +59,8 @@
                    page-total="@Model.PagesCount"
                    action="Index"
                    controller="Product"
-                   group-id="@currentGroup"></pager>
-            <div>
-    
-            </div>
+                   group-id="@currentCategory">
+            </pager>
         </div>
     </div>
 </div>
