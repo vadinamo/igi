@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WEB_053502_YUREV.Data;
 using WEB_053502_YUREV.Entities;
+using WEB_053502_YUREV.Extensions;
 using WEB_053502_YUREV.Models;
 
 namespace WEB_053502_YUREV.Controllers;
@@ -25,7 +26,12 @@ public class ProductController : Controller
         
         ViewData["Categories"] = _context.ItemCategories;
         ViewData["CurrentCategory"] = category ?? Guid.Empty;
-            
+
+        if (Request.IsAjax())
+        {
+            return PartialView("_ListPartial", ListViewModel<Item>.GetModel(filteredItems, page, _pageSize));
+        }
+
         return _context.Items != null ? 
             View(ListViewModel<Item>.GetModel(filteredItems, page, _pageSize)) :
             Problem("Entity set is null.");

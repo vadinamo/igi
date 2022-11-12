@@ -50,10 +50,7 @@
         </div>
         <div class="col-10">
             <div class="card-group" id="list">
-                @foreach (var item in Model)
-                {
-                    <partial name="_ListItemPartial" model="@item"/>
-                }
+                <partial name="_ListPartial" model="@Model"/>
             </div>
             <pager page-current="@Model.CurrentPage"
                    page-total="@Model.PagesCount"

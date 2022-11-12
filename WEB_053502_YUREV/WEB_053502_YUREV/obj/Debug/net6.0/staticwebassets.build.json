@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KS+PMtQjbpsDfKZg195bCVU6RqNxnW9u1Nk6Sd/zDGw=",
+  "Hash": "OxB7d+QkfnQXou92/9ekRAP5ywGk6MmbHIQLKnCQUfw=",
   "Source": "WEB_053502_YUREV",
   "BasePath": "_content/WEB_053502_YUREV",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/js/pager.js",
+      "SourceId": "WEB_053502_YUREV",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/",
+      "BasePath": "_content/WEB_053502_YUREV",
+      "RelativePath": "js/pager.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/pager.js"
     },
     {
       "Identity": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/js/site.js",
