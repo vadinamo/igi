@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Areas/Admin/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Areas/Admin/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Areas/Admin/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9BY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -55,6 +67,46 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/Item/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/Item/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/Item/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/Item/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/Item/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/ItemCategory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbUNhdGVnb3J5L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/ItemCategory/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbUNhdGVnb3J5L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/ItemCategory/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbUNhdGVnb3J5L0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/ItemCategory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbUNhdGVnb3J5L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/ItemCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSXRlbUNhdGVnb3J5L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -89,6 +141,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/Views/_ViewImports.cshtml]

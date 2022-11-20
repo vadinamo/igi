@@ -1,0 +1,62 @@
+@page
+@model WEB_053502_YUREV.Areas.Admin.Pages.Index
+
+<div class="scaffold">
+    <div class="row">
+        <div class="card-group" style="justify-content: center">
+            <div class="card m-2 p-1 col-4" style="max-width: 300px; max-height: 400px; width: 300px; height: 400px">
+                <img src="~/images/avatar.png"
+                     onerror="this.onerror=null; this.src='@Url.Content("~/images/avatar.png")'"
+                     alt='image'
+                     class="card-img" style="min-width: 300px; min-height: 300px; max-width: 300px; max-height: 300px; width: 300px; height: 300px"/>
+                <div class="card-body">
+                    <h5 class="card-title" style="color: black">
+                        Users
+                    </h5>
+
+                    <a asp-action="Index"
+                       asp-controller="User"
+                       class="btn btn-outline-info">
+                        More
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card m-2 p-1 col-4" style="max-width: 300px; max-height: 400px; width: 300px; height: 400px">
+                <img src="~/images/item.png"
+                     onerror="this.onerror=null; this.src='@Url.Content("~/images/item.png")'"
+                     alt='image'
+                     class="card-img" style="min-width: 300px; min-height: 300px; max-width: 300px; max-height: 300px; width: 300px; height: 300px"/>
+                <div class="card-body">
+                    <h5 class="card-title" style="color: black">
+                        Items
+                    </h5>
+
+                    <a asp-action="Index"
+                       asp-controller="Item"
+                       class="btn btn-outline-info">
+                        More
+                    </a>
+                </div>
+            </div>
+
+            <div class="card m-2 p-1 col-4" style="max-width: 300px; max-height: 400px; width: 300px; height: 400px">
+                <img src="~/images/category.png"
+                     onerror="this.onerror=null; this.src='@Url.Content("~/images/category.png")'"
+                     alt='image'
+                     class="card-img" style="min-width: 300px; min-height: 300px; max-width: 300px; max-height: 300px; width: 300px; height: 300px"/>
+                <div class="card-body">
+                    <h5 class="card-title" style="color: black">
+                        Item categories
+                    </h5>
+
+                    <a asp-action="Index"
+                       asp-controller="ItemCategory"
+                       class="btn btn-outline-info">
+                        More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

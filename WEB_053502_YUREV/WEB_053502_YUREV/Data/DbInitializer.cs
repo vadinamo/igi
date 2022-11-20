@@ -54,27 +54,27 @@ public class DbInitializer : IDbInitializer
             {
                 new Item()
                 {
-                    Id = Guid.NewGuid(), Name = "Shirt", Description = "shirt description", Image = "/images/shirt.jpg",
+                    Id = Guid.NewGuid(), Name = "Shirt", Description = "shirt description", Image = "/images/items/shirt.jpg",
                     CategoryId = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Shirt").Id, Price = 1
                 },
                 new Item()
                 {
-                    Id = Guid.NewGuid(), Name = "Pants", Description = "pants description", Image = "/images/pants.jpg",
+                    Id = Guid.NewGuid(), Name = "Pants", Description = "pants description", Image = "/images/items/pants.jpg",
                     CategoryId = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Pants").Id, Price = 2
                 },
                 new Item()
                 {
-                    Id = Guid.NewGuid(), Name = "Headdress", Description = "headdress description", Image = "/images/cap.jpg",
+                    Id = Guid.NewGuid(), Name = "Headdress", Description = "headdress description", Image = "/images/items/cap.jpg",
                     CategoryId = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Headdress").Id, Price = 3
                 },
                 new Item()
                 {
-                    Id = Guid.NewGuid(), Name = "Jacket", Description = "jacket description", Image = "/images/jacket.jpg",
+                    Id = Guid.NewGuid(), Name = "Jacket", Description = "jacket description", Image = "/images/items/jacket.jpg",
                     CategoryId = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Jacket").Id, Price = 4
                 },
                 new Item()
                 {
-                    Id = Guid.NewGuid(), Name = "Shoes", Description = "shoes description", Image = "/images/shoe.jpg",
+                    Id = Guid.NewGuid(), Name = "Shoes", Description = "shoes description", Image = "/images/items/shoe.jpg",
                     CategoryId = _context.ItemCategories.FirstOrDefault(i => i.CategoryName == "Shoes").Id, Price = 6
                 }
             };
