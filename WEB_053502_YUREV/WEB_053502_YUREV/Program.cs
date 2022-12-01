@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WEB_053502_YUREV.Data;
 using WEB_053502_YUREV.Entities;
+using WEB_053502_YUREV.Models;
+using WEB_053502_YUREV.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +36,15 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(opt =>
+{
+    opt.Cookie.HttpOnly = true;
+    opt.Cookie.IsEssential = true;
+});
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<Cart>(sp => CartService.GetCart(sp));
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -57,6 +68,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession(); 
 
 app.MapControllerRoute(
     name: "default",

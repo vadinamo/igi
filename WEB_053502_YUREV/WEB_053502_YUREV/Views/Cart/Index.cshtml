@@ -1,0 +1,82 @@
+@model IEnumerable<WEB_053502_YUREV.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="scaffold">
+    <h1>Your cart</h1>
+
+    <table class="table table-bordered table-striped" style="text-align: center">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item.Price)
+            </th>
+            <th>
+                <a class="btn btn-outline-danger"
+                   asp-action="ClearAll" asp-controller="Cart">
+                    Clear all
+                </a>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content(item.Item.Image)" alt="Car_Image"
+                         onerror="this.onerror=null; this.src='@Url.Content("~/images/item.png")'" width="50" class="rounded"/>
+                </td>
+                <td>
+                    <label>@item.Item.Name</label>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td>
+                    @{
+                        var price = item.Count * item.Item.Price;
+                    }
+                    @Html.DisplayFor(modelItem => price)
+                </td>
+                <td>
+                    @{
+                        var request = ViewContext.HttpContext.Request;
+                        var returnUrl = request.Path + request.QueryString.ToUriComponent();
+                    }
+
+                    <a class="btn btn-outline-success"
+                       asp-action="Add" asp-controller="Cart"
+                       asp-route-id="@item.Item.Id"
+                       asp-route-returnUrl="@returnUrl">
+                        +
+                    </a>
+                    <a class="btn btn-outline-danger"
+                       asp-action="RemoveOne" asp-controller="Cart"
+                       asp-route-id="@item.Item.Id"
+                       asp-route-returnUrl="@returnUrl">
+                        -
+                    </a>
+                    |
+                    <a class="btn btn-outline-warning"
+                       asp-action="Delete" asp-controller="Cart"
+                       asp-route-id="@item.Item.Id">
+                        ×
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

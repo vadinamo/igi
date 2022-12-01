@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WU/dFO9fyUuJ3McYIPIl+6cY1XpM2tsdWWSkup9c4pY=",
+  "Hash": "9RztaxBw9SXAvo3k5HibTUOqzbXp5XMX0Q539FKrWv4=",
   "Source": "WEB_053502_YUREV",
   "BasePath": "_content/WEB_053502_YUREV",
   "Mode": "Default",
@@ -1188,23 +1188,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/item.png"
-    },
-    {
-      "Identity": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/images/items/8f5789ca-04ba-4659-a49a-0374707b4c96.jpg",
-      "SourceId": "WEB_053502_YUREV",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/",
-      "BasePath": "_content/WEB_053502_YUREV",
-      "RelativePath": "images/items/8f5789ca-04ba-4659-a49a-0374707b4c96.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/items/8f5789ca-04ba-4659-a49a-0374707b4c96.jpg"
     },
     {
       "Identity": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/images/items/cap.jpg",

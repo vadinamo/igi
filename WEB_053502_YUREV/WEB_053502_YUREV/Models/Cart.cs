@@ -11,40 +11,49 @@ public class CartItem
 public class Cart
 {
     public Dictionary<Guid,CartItem> Items { get; set; }
-    
     public Cart()
     {            
         Items = new Dictionary<Guid, CartItem>();
     }
-
-    public double Count()
+    public int Count
     {
-        return Items.Sum(i => i.Value.Count);
+        get
+        {
+            return Items.Sum(item => item.Value.Count);
+        }
     }
-    
-    public double Price()
+    public double Price
     {
-        return Items.Sum(i => i.Value.Count * i.Value.Item.Price);
+        get
+        {
+            return Items.Sum(item => item.Value.Count * item.Value.Item.Price);
+        }
     }
-
-    public void Add(Item item)
+    public virtual void AddToCart(Item item)
     {
         if (Items.ContainsKey(item.Id))
             Items[item.Id].Count++;
-        // иначе - добавть объект в корзину
         else
             Items.Add(item.Id, new CartItem {
-                Item = item,
-                Count = 1
+                Item = item, Count = 1
             });
     }
-    
-    public virtual void Remove(Guid id)
+
+    public virtual void RemoveOneFromCart(Item item)
+    {
+        if (!Items.ContainsKey(item.Id)) return;
+        if (Items[item.Id].Count > 1)
+            Items[item.Id].Count--;
+        else
+            Items.Remove(item.Id);
+    }
+
+    public virtual void RemoveFromCart(Guid id)
     {
         Items.Remove(id);
     }
     
-    public virtual void Clear()
+    public virtual void ClearAll()
     {
         Items.Clear();
     }
