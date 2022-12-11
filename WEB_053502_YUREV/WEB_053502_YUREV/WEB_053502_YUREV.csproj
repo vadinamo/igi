@@ -22,11 +22,44 @@
           <PrivateAssets>all</PrivateAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+        <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.1-dev-00077" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Logs" />
       <Folder Include="wwwroot\images" />
       <Folder Include="wwwroot\lib\font-awesome" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\ItemCategory\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\ItemCategory\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\ItemCategory\Details.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\ItemCategory\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\ItemCategory\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Item\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Item\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Item\Details.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Item\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Item\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Details.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\User\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\ItemCategory\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ItemCategory\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ItemCategory\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ItemCategory\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ItemCategory\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\User\Index.cshtml" />
     </ItemGroup>
 
 </Project>

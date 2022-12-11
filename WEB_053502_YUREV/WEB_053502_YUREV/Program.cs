@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WEB_053502_YUREV.Data;
 using WEB_053502_YUREV.Entities;
+using WEB_053502_YUREV.Extensions;
 using WEB_053502_YUREV.Models;
 using WEB_053502_YUREV.Services;
 
@@ -11,6 +12,17 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
+
+builder.Host.ConfigureLogging(log =>
+{
+    var logPath = $"Logs/Log-[{DateTime.Today:dd.MM.yyyy}].txt";
+    log.ClearProviders();
+    log.AddFile(logPath);
+    log.AddFilter("Microsoft", LogLevel.None);
+    log.AddFilter("System", LogLevel.None);
+
+});
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -70,11 +82,19 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseSession(); 
+app.UseLogging();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "areas",
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapRazorPages();
+});
 
 app.Services.CreateScope().ServiceProvider.GetRequiredService<IDbInitializer>().Initialize();
 

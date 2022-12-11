@@ -30,7 +30,7 @@ public class CartService : Cart
     public override void RemoveOneFromCart(Item item)
     {
         base.RemoveOneFromCart(item);
-        Session.Set<CartService>(sessionKey, this);
+        Session?.Set<CartService>(sessionKey, this);
     }
     public override void RemoveFromCart(Guid id)
     {

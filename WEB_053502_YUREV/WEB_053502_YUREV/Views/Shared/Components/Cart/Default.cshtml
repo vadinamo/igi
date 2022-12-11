@@ -1,3 +1,5 @@
-<a href="#" class="navbar-text ms-auto">
-    00,0 руб <i class="fas fa-shopping-cart nav-color"></i> (0)
+@model WEB_053502_YUREV.Models.Cart
+
+<a asp-controller="Cart" asp-action="Index" class="but navbar-text cart" style="margin-right: 10px; max-width: 190px">
+    $@Model.Price (@Model.Count)
 </a>
