@@ -1,0 +1,12 @@
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/bin/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.deps.json
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/bin/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.dll
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/bin/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.pdb
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.csproj.AssemblyReference.cache
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.AssemblyInfoInputs.cache
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.AssemblyInfo.cs
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.csproj.CoreCompileInputs.cache
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.dll
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/refint/WEB_053502_YUREV.Blazor.Shared.dll
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/WEB_053502_YUREV.Blazor.Shared.pdb
+/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/Debug/net6.0/ref/WEB_053502_YUREV.Blazor.Shared.dll

@@ -1,0 +1,58 @@
+2022-12-12T01:06:59.4918680+03:00  [INF] User profile is available. Using '"/Users/vadinamo/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest. (a162847e)
+2022-12-12T01:07:00.9421840+03:00  [INF] Entity Framework Core "6.0.9" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.Sqlite":"6.0.3"' with options: "None" (d2805559)
+2022-12-12T01:07:01.1262920+03:00  [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*) FROM \"sqlite_master\" WHERE \"type\" = 'table' AND \"rootpage\" IS NOT NULL;" (0723d8ff)
+2022-12-12T01:07:01.3793670+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"ItemCategories\" AS \"i\")" (0723d8ff)
+2022-12-12T01:07:01.3866450+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"Items\" AS \"i\")" (0723d8ff)
+2022-12-12T01:07:01.4181550+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"AspNetUsers\" AS \"a\"
+    WHERE \"a\".\"Discriminator\" = 'ApplicationUser')" (0723d8ff)
+2022-12-12T01:07:01.4500160+03:00  [INF] Creating key {f5d375d7-cf92-400b-ab49-6da15ffdb259} with creation date 2022-12-11 22:07:01Z, activation date 2022-12-11 22:07:01Z, and expiration date 2023-03-11 22:07:01Z. (77afce94)
+2022-12-12T01:07:01.4561530+03:00  [WRN] No XML encryptor configured. Key {f5d375d7-cf92-400b-ab49-6da15ffdb259} may be persisted to storage in unencrypted form. (9ca7e61e)
+2022-12-12T01:07:01.4569490+03:00  [INF] Writing data to file '"/Users/vadinamo/.aspnet/DataProtection-Keys/key-f5d375d7-cf92-400b-ab49-6da15ffdb259.xml"'. (da22a8b1)
+2022-12-12T01:07:01.5401820+03:00  [INF] Now listening on: "https://localhost:7175" (d826f4b8)
+2022-12-12T01:07:01.5402060+03:00  [INF] Now listening on: "http://localhost:5027" (d826f4b8)
+2022-12-12T01:07:01.5426310+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-12-12T01:07:01.5427330+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-12-12T01:07:01.5427560+03:00  [INF] Content root path: "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/" (b5d60022)
+2022-12-12T01:07:02.7978100+03:00 0HMMROG3TI1V6:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:7175/ - - (ca22a1cb)
+2022-12-12T01:07:02.9226550+03:00 0HMMROG3TI1V6:00000002 [INF] Executing endpoint '"WEB_053502_YUREV.Controllers.HomeController.Index (WEB_053502_YUREV)"' (500cc934)
+2022-12-12T01:07:02.9386300+03:00 0HMMROG3TI1V6:00000002 [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\", page = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WEB_053502_YUREV.Controllers.HomeController" ("WEB_053502_YUREV"). (122b2fdf)
+2022-12-12T01:07:02.9581210+03:00 0HMMROG3TI1V6:00000002 [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2022-12-12T01:07:03.4035490+03:00 0HMMROG3TI1V6:00000002 [INF] Executed ViewResult - view "Index" executed in 447.8866ms. (f66409e9)
+2022-12-12T01:07:03.4045490+03:00 0HMMROG3TI1V6:00000002 [INF] Executed action "WEB_053502_YUREV.Controllers.HomeController.Index (WEB_053502_YUREV)" in 465.2366ms (afa2e885)
+2022-12-12T01:07:03.4046670+03:00 0HMMROG3TI1V6:00000002 [INF] Executed endpoint '"WEB_053502_YUREV.Controllers.HomeController.Index (WEB_053502_YUREV)"' (99874f2b)
+2022-12-12T01:07:03.4252260+03:00 0HMMROG3TI1V6:00000002 [INF] Request finished HTTP/1.1 GET https://localhost:7175/ - - - 200 - text/html;+charset=utf-8 634.0546ms (791a596a)
+2022-12-12T01:07:03.4401190+03:00 0HMMROG3TI1V6:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:7175/lib/font-awesome/css/all.css - - (ca22a1cb)
+2022-12-12T01:07:03.4620200+03:00 0HMMROG3TI1V7:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:7175/lib/bootstrap/dist/css/bootstrap.min.css - - (ca22a1cb)
+2022-12-12T01:07:03.4870220+03:00 0HMMROG3TI1V7:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"' (27b0a520)
+2022-12-12T01:07:03.4870180+03:00 0HMMROG3TI1V6:00000003 [INF] Sending file. Request path: '"/lib/font-awesome/css/all.css"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/lib/font-awesome/css/all.css"' (27b0a520)
+2022-12-12T01:07:03.4888200+03:00 0HMMROG3TI1V6:00000003 [INF] Request finished HTTP/1.1 GET https://localhost:7175/lib/font-awesome/css/all.css - - - 200 139724 text/css 48.6520ms (791a596a)
+2022-12-12T01:07:03.4889660+03:00 0HMMROG3TI1V7:00000002 [INF] Request finished HTTP/1.1 GET https://localhost:7175/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 26.7292ms (791a596a)
+2022-12-12T01:07:03.4972350+03:00 0HMMROG3TI1VA:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:7175/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - (ca22a1cb)
+2022-12-12T01:07:03.4985100+03:00 0HMMROG3TI1VA:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"' (27b0a520)
+2022-12-12T01:07:03.4986900+03:00 0HMMROG3TI1VA:00000002 [INF] Request finished HTTP/1.1 GET https://localhost:7175/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 1.4596ms (791a596a)
+2022-12-12T01:07:03.5080650+03:00 0HMMROG3TI1V8:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:7175/css/site.css?v=oDBev9DMVh_8GpT_ZcrF138GLJqpAkR0DQdzK9ptlf4 - - (ca22a1cb)
+2022-12-12T01:07:03.5099810+03:00 0HMMROG3TI1V8:00000002 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/css/site.css"' (27b0a520)
+2022-12-12T01:07:03.5101300+03:00 0HMMROG3TI1V8:00000002 [INF] Request finished HTTP/1.1 GET https://localhost:7175/css/site.css?v=oDBev9DMVh_8GpT_ZcrF138GLJqpAkR0DQdzK9ptlf4 - - - 200 143 text/css 2.0581ms (791a596a)
+2022-12-12T01:07:03.5252580+03:00 0HMMROG3TI1V9:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:7175/WEB_053502_YUREV.styles.css?v=9NT3FCmPXl9fm-j4jy250oiDcC1Q7mFWW7CxlRWEYFA - - (ca22a1cb)
+2022-12-12T01:07:03.5258570+03:00 0HMMROG3TI1V9:00000002 [INF] Sending file. Request path: '"/WEB_053502_YUREV.styles.css"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/obj/Debug/net6.0/scopedcss/bundle/WEB_053502_YUREV.styles.css"' (27b0a520)
+2022-12-12T01:07:03.5260900+03:00 0HMMROG3TI1V9:00000002 [INF] Request finished HTTP/1.1 GET https://localhost:7175/WEB_053502_YUREV.styles.css?v=9NT3FCmPXl9fm-j4jy250oiDcC1Q7mFWW7CxlRWEYFA - - - 200 1084 text/css 0.7847ms (791a596a)
+2022-12-12T01:07:03.5262880+03:00 0HMMROG3TI1VB:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:7175/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - (ca22a1cb)
+2022-12-12T01:07:03.5285930+03:00 0HMMROG3TI1VB:00000002 [INF] Sending file. Request path: '"/js/site.js"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/js/site.js"' (27b0a520)
+2022-12-12T01:07:03.5287300+03:00 0HMMROG3TI1VB:00000002 [INF] Request finished HTTP/1.1 GET https://localhost:7175/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY - - - 200 226 application/javascript 2.4189ms (791a596a)
+2022-12-12T01:07:03.5831490+03:00 0HMMROG3TI1V6:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:7175/lib/font-awesome/webfonts/fa-brands-400.woff2 - - (ca22a1cb)
+2022-12-12T01:07:03.5847180+03:00 0HMMROG3TI1V6:00000004 [INF] Sending file. Request path: '"/lib/font-awesome/webfonts/fa-brands-400.woff2"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/lib/font-awesome/webfonts/fa-brands-400.woff2"' (27b0a520)
+2022-12-12T01:07:03.5848600+03:00 0HMMROG3TI1V6:00000004 [INF] Request finished HTTP/1.1 GET https://localhost:7175/lib/font-awesome/webfonts/fa-brands-400.woff2 - - - 200 107460 font/woff2 1.7347ms (791a596a)
+2022-12-12T01:07:03.7461140+03:00 0HMMROG3TI1V6:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:7175/favicon.ico - - (ca22a1cb)
+2022-12-12T01:07:03.7471490+03:00 0HMMROG3TI1V6:00000005 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV/wwwroot/favicon.ico"' (27b0a520)
+2022-12-12T01:07:03.7472700+03:00 0HMMROG3TI1V6:00000005 [INF] Request finished HTTP/1.1 GET https://localhost:7175/favicon.ico - - - 200 5430 image/x-icon 1.2201ms (791a596a)
+2022-12-12T01:07:09.7549120+03:00  [INF] Application is shutting down... (90f52c38)

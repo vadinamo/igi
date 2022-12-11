@@ -1,0 +1,206 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Server/WEB_053502_YUREV.Blazor.Server.csproj": {}
+  },
+  "projects": {
+    "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/WEB_053502_YUREV.Blazor.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/WEB_053502_YUREV.Blazor.Client.csproj",
+        "projectName": "WEB_053502_YUREV.Blazor.Client",
+        "projectPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/WEB_053502_YUREV.Blazor.Client.csproj",
+        "packagesPath": "/Users/vadinamo/.nuget/packages/",
+        "outputPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vadinamo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/WEB_053502_YUREV.Blazor.Shared.csproj": {
+                "projectPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/WEB_053502_YUREV.Blazor.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.3, 6.0.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Server/WEB_053502_YUREV.Blazor.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Server/WEB_053502_YUREV.Blazor.Server.csproj",
+        "projectName": "WEB_053502_YUREV.Blazor.Server",
+        "projectPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Server/WEB_053502_YUREV.Blazor.Server.csproj",
+        "packagesPath": "/Users/vadinamo/.nuget/packages/",
+        "outputPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Server/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vadinamo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/WEB_053502_YUREV.Blazor.Client.csproj": {
+                "projectPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/WEB_053502_YUREV.Blazor.Client.csproj"
+              },
+              "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/WEB_053502_YUREV.Blazor.Shared.csproj": {
+                "projectPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/WEB_053502_YUREV.Blazor.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/WEB_053502_YUREV.Blazor.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/WEB_053502_YUREV.Blazor.Shared.csproj",
+        "projectName": "WEB_053502_YUREV.Blazor.Shared",
+        "projectPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/WEB_053502_YUREV.Blazor.Shared.csproj",
+        "packagesPath": "/Users/vadinamo/.nuget/packages/",
+        "outputPath": "/Users/vadinamo/Documents/C#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vadinamo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
