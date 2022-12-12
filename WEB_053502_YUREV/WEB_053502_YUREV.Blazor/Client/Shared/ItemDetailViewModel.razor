@@ -1,0 +1,38 @@
+﻿@using WEB_053502_YUREV.Blazor.Shared
+@using System.Text.Json.Serialization
+
+@if (item is not null)
+{
+    <div class="row">
+        <div class="col-5">
+            <img src=@imageSrc alt="itemImage" width="300" class="rounded"/>
+        </div>
+        <div class="col-5">
+            <div class="card-body">
+                <h5 class="card-title">
+                    @item.Name
+                </h5>
+                <div class="dropdown-divider"></div>
+                <p class="card-text">
+                    @item.Description
+                </p>
+                <div class="dropdown-divider"></div>
+                <div class="card-subtitle badge">
+                    <h4>$@item.Price</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+
+    [Parameter]
+    public Item item { get; set; }
+
+    string imageSrc => item.Image == null ? "/images/item.png" : $"{item.Image}";
+
+    [Parameter]
+    public EventCallback<Item> itemChanged { get; set; }
+
+}

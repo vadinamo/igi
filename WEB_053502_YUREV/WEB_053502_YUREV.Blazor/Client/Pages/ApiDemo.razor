@@ -1,0 +1,33 @@
+@page "/api/demo"
+@using WEB_053502_YUREV.Blazor.Shared
+@using System.Text.Json.Serialization
+
+@inject HttpClient HttpClient
+
+<h3>Items</h3>
+<div style="display: block; height: 15em; overflow-y: scroll;">
+    <ItemListViewModel @bind-Items="@items" SelectionChanged="ShowDetails"/>
+</div>
+
+<div class="mt-3">
+    <ItemDetailViewModel item="@selectedItem"/>
+</div>
+
+@code {
+    private Guid[] items;
+    private Item selectedItem;
+
+    private int currentItem;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await HttpClient.GetFromJsonAsync<Guid[]>("/api/items");
+    }
+
+    private async void ShowDetails(int newSelection)
+    {
+        currentItem = newSelection;
+        selectedItem = await HttpClient.GetFromJsonAsync<Item>($"/api/Items/{items[currentItem]}");
+    }
+
+}

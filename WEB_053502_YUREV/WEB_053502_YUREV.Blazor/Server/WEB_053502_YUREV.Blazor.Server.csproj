@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\WEB_053502_YUREV\WEB_053502_YUREV.csproj" />
     <ProjectReference Include="..\Client\WEB_053502_YUREV.Blazor.Client.csproj" />
     <ProjectReference Include="..\Shared\WEB_053502_YUREV.Blazor.Shared.csproj" />
   </ItemGroup>

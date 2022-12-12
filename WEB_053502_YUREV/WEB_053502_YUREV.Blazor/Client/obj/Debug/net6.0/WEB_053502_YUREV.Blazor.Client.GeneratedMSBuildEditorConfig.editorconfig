@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/Pages/ApiDemo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBpRGVtby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/Shared/ItemDetailViewModel.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0l0ZW1EZXRhaWxWaWV3TW9kZWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/Shared/ItemListViewModel.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0l0ZW1MaXN0Vmlld01vZGVsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/vadinamo/Documents/C\#/igi/lab1/WEB_053502_YUREV/WEB_053502_YUREV.Blazor/Client/Shared/SurveyPrompt.razor]

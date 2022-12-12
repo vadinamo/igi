@@ -196,15 +196,15 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "WEB_053502_YUREV.Blazor.Shared.dll": "sha256-ROyBSjhYyHu4QKRdwwg+CzdOra6gTHEUVmOgsribvKY=",
-      "WEB_053502_YUREV.Blazor.Client.dll": "sha256-77YQuwkjKsyxmJjQXT4iQCViMWsxr9XNLCPwwuohHu0="
+      "WEB_053502_YUREV.Blazor.Shared.dll": "sha256-owzwolYvVA7RLKmhKg8LOmEYuHE5FX9Fla+JrA9cwxo=",
+      "WEB_053502_YUREV.Blazor.Client.dll": "sha256-7eMGjyBOU2UUzLfpThvT7oNmg6fPYfdvRdb+gGwVs+8="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "WEB_053502_YUREV.Blazor.Shared.pdb": "sha256-dC+YhTdz4PRfAS1BFWIqUbZKLD5kqOU1KuT41+iXGnE=",
-      "WEB_053502_YUREV.Blazor.Client.pdb": "sha256-dHBpOMNkBkI\/BQ8aTc+15gaTusdJ9Df\/vIZgk9PVsoc="
+      "WEB_053502_YUREV.Blazor.Shared.pdb": "sha256-C1+vXK51g2S6jBH+\/z6VbnC6R8sWxtuVlkv78k6adM8=",
+      "WEB_053502_YUREV.Blazor.Client.pdb": "sha256-pZOLEFqF5sm4S1vxd8Vltt1kg6YLnSlCgxBZD+wv8+c="
     },
     "runtime": {
       "dotnet.6.0.3.8d5fvliqns.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

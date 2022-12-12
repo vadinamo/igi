@@ -1,0 +1,38 @@
+﻿@using WEB_053502_YUREV.Blazor.Shared
+@using System.Text.Json.Serialization
+
+@if (Items is not null)
+{
+    <div class="list-group">
+        @for (var i = 0; i < Items.Length; i++)
+        {
+            var copy = i;
+            var item = Items[copy];
+
+            <button class="list-group-item list-group-item-action @(selection == copy ? "active" : null)"
+                    @onclick="() => ChangeSelection(copy)">
+                @(copy + 1). @item
+            </button>
+        }
+    </div>
+}
+
+@code{
+    private int selection;
+
+    [Parameter]
+    public Guid[] Items { get; set; }
+    
+    [Parameter]
+    public EventCallback<Guid[]> ItemsChanged { get; set; }
+
+    [Parameter]
+    public EventCallback<int> SelectionChanged { get; set; }
+
+    private async Task ChangeSelection(int newSelection)
+    {
+        selection = newSelection;
+        await SelectionChanged.InvokeAsync(selection);
+    }
+
+}
